@@ -33,6 +33,7 @@ There are two ways of using this service:
 - single (always the same) object placement in the world: simply check collisions between the two meshes (one is in ob_l1, one is in ob_l2). The mesh of this object gets pre-loaded when the node is launched.
 - multiple object placement in the world: recursevly check collisions between one mesh and the already placed ones. First iteration is `mesh1-world`, second is `mesh2-[world,mesh1]`, etc. NOTE: note that this can be used also as a single-object placement with different meshes per each iteration.
 
+_________
 ### Usage
 
 Simply build the node.
