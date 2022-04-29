@@ -6,10 +6,12 @@ The idea is based on the work made by @pradeepr-roboticist in this [issue](https
 
 The `moveit_core` is updated for ROS `noetic` as of **29 Apr 2022**.
 
+_______
 ### Installation
 
 My suggestion is to install `moveit_core` first from `apt`, and then override the package by installing this in your `catkin_ws`.
 
+_______
 ### How it works
 
 The main edited file in `moveit_core` is `moveit_core\collision_detection_fcl\collision_env_fcl.cpp` line [333](https://github.com/eliabntt/moveit_based_collision_checker_and_placement/blob/main/moveit_core/collision_detection_fcl/src/collision_env_fcl.cpp#L333).
@@ -75,10 +77,10 @@ You need to set `min` and `max` limits for `x,y,z`, the `polygon` vertices (`x,y
 The service return the in-order `x,y,z,yaw` location found. (yaw spanning the whole circle).
 IF IT WAS NOT POSSIBLE TO PLACE THE OBJECT THE SYSTEM USE A FIXED VALUE
 ```
-	x = max_limits.at(0) + 10;
-	y = max_limits.at(1) + 10;
-	z = -10;
-	yaw = 0;
+x = max_limits.at(0) + 10;
+y = max_limits.at(1) + 10;
+z = -10;
+yaw = 0;
 ```
 (lines 155-158 of the code).
 
@@ -92,6 +94,7 @@ The workflow is as follow:
 - check for collision
 - repeat a maximum of 90 times or until the maximum amount of possible collision is satisfied
 
+___________
 ## License
 
 All Code in this repository - unless otherwise stated in local license or code headers is
