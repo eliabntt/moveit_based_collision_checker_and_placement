@@ -33,6 +33,8 @@ There are two ways of using this service:
 - single (always the same) object placement in the world: simply check collisions between the two meshes (one is in ob_l1, one is in ob_l2). The mesh of this object gets pre-loaded when the node is launched.
 - multiple object placement in the world: recursevly check collisions between one mesh and the already placed ones. First iteration is `mesh1-world`, second is `mesh2-[world,mesh1]`, etc. NOTE: note that this can be used also as a single-object placement with different meshes per each iteration.
 
+The object movement in the scene is done in low-level moveit-based c library calls. This means that the checking can be done with a high-level of efficiency.
+
 _________
 ### Usage
 
@@ -94,6 +96,11 @@ The workflow is as follow:
 - until a valid location is found generate random x,y,z,yaw values
 - check for collision
 - repeat a maximum of 90 times or until the maximum amount of possible collision is satisfied
+
+__________
+### NOTE(s)
+
+- The system to work requires a moveit scene set up and running.
 
 ___________
 ## License
