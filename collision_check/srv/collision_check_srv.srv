@@ -1,6 +1,6 @@
 string env_stl_path
 string[] ob_names
-string[] folder_paths
+string[] ob_stl_paths
 bool is_cam
 float64 forced_z
 float64[] min_limits

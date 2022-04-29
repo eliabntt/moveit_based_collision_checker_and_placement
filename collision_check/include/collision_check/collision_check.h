@@ -80,7 +80,7 @@ private:
 		bool isInside(PointSimple p);
 		std::vector<geometry_msgs::Point> polygon;
 		std::vector<double> min_limits, max_limits;
-		void randomize_position(double& x, double& y, double& z);
+		void randomize_position(double& x, double& y, double& z, double& yaw);
 };
 
 #endif //TRY_COLLISION_COLLISION_CHECK_H

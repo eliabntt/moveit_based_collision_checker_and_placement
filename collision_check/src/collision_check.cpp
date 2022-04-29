@@ -3,10 +3,11 @@
 #include "collision_check/collision_check.h"
 #include <filesystem>
 
-void CollisionChecker::randomize_position(double& x, double& y, double& z) {
+void CollisionChecker::randomize_position(double& x, double& y, double& z, double& yaw) {
 	x = dis_x(gen);
 	y = dis_y(gen);
 	z = dis_z(gen);
+	yaw = dis_yaw(gen);
 }
 
 void CollisionChecker::move_collision_object() {
@@ -108,14 +109,13 @@ CollisionChecker::get_position(double &x, double &y, double &z, double &yaw, con
 	dis_z = std::uniform_real_distribution<double>(min_limits.at(2), max_limits.at(2));
 	dis_yaw = std::uniform_real_distribution<double>(-M_PI, M_PI);
 
-	randomize_position(x,y,z);
+	randomize_position(x,y,z, yaw);
 	while (not (isInside({x, y}))) {
 		ROS_INFO_STREAM("x: " << x << " y: " << y << " z: " << z);
 		ROS_INFO_STREAM("isInside: " << isInside({x, y}));
-		randomize_position(x,y,z);
+		randomize_position(x,y,z, yaw);
 	}
 
-	yaw = dis_yaw(gen);
 	pose = Eigen::Isometry3d::Identity();
 	pose.translation() = Eigen::Vector3d(x, y, z);
 	pose = Eigen::Translation3d(pose.translation()) * (Eigen::AngleAxisd(0, Eigen::Vector3d::UnitX()) * Eigen::AngleAxisd(0, Eigen::Vector3d::UnitY()) * Eigen::AngleAxisd(yaw, Eigen::Vector3d::UnitZ()));
@@ -132,13 +132,12 @@ CollisionChecker::get_position(double &x, double &y, double &z, double &yaw, con
 				move_collision_object();
 				return true;
 			} else if (i < 99) {
-				randomize_position(x,y,z);
-				yaw = dis_yaw(gen);
+				randomize_position(x,y,z, yaw);
 
 				while (not (isInside({x, y}))) {
 //					ROS_INFO_STREAM("isInside: " << isInside({x, y}));
 //					ROS_INFO_STREAM("x: " << x << " y: " << y << " z: " << z);
-					randomize_position(x,y,z);
+					randomize_position(x,y,z, yaw);
 				}
 
 				pose = Eigen::Isometry3d::Identity();
@@ -254,7 +253,7 @@ bool CollisionChecker::check_collision(collision_check::collision_check_srv::Req
 			object_colors.push_back(oc);
 
 			m = shapes::createMeshFromResource(
-				"file://" + req.folder_paths[cnt] + "/" + ob + "/" + ob + ".stl");
+				"file://" + req.ob_stl_paths[cnt]);
 			cnt += 1;
 
 			shapes::constructMsgFromShape(m, mesh_msg);
