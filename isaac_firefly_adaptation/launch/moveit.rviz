@@ -119,6 +119,7 @@ Visualization Manager:
         State Display Time: 0.05 s
         Trail Step Size: 1
         Trajectory Topic: move_group/display_planned_path
+        Use Sim Time: false
       Planning Metrics:
         Payload: 1
         Show Joint Torques: false
@@ -221,6 +222,26 @@ Visualization Manager:
           Value: true
         fake/z_link:
           Value: true
+        my_robot_0/base_link:
+          Value: true
+        my_robot_0/camera_link:
+          Value: true
+        my_robot_0/current_reference:
+          Value: true
+        my_robot_0/holder_link:
+          Value: true
+        my_robot_0/pitch_link:
+          Value: true
+        my_robot_0/roll_link:
+          Value: true
+        my_robot_0/x_link:
+          Value: true
+        my_robot_0/y_link:
+          Value: true
+        my_robot_0/yaw_link:
+          Value: true
+        my_robot_0/z_link:
+          Value: true
         navigation:
           Value: true
         world:
@@ -242,6 +263,18 @@ Visualization Manager:
                       fake/yaw_link:
                         fake/camera_link:
                           {}
+          my_robot_0/base_link:
+            my_robot_0/x_link:
+              my_robot_0/y_link:
+                my_robot_0/z_link:
+                  my_robot_0/roll_link:
+                    my_robot_0/pitch_link:
+                      my_robot_0/yaw_link:
+                        my_robot_0/holder_link:
+                          my_robot_0/camera_link:
+                            {}
+          my_robot_0/current_reference:
+            {}
           navigation:
             {}
       Update Interval: 0
@@ -267,6 +300,26 @@ Visualization Manager:
           Value: true
         fake/z_link:
           Value: true
+        my_robot_0/base_link:
+          Value: true
+        my_robot_0/camera_link:
+          Value: true
+        my_robot_0/current_reference:
+          Value: true
+        my_robot_0/holder_link:
+          Value: true
+        my_robot_0/pitch_link:
+          Value: true
+        my_robot_0/roll_link:
+          Value: true
+        my_robot_0/x_link:
+          Value: true
+        my_robot_0/y_link:
+          Value: true
+        my_robot_0/yaw_link:
+          Value: true
+        my_robot_0/z_link:
+          Value: true
         navigation:
           Value: true
         world:
@@ -288,6 +341,18 @@ Visualization Manager:
                       fake/yaw_link:
                         fake/camera_link:
                           {}
+          my_robot_0/base_link:
+            my_robot_0/x_link:
+              my_robot_0/y_link:
+                my_robot_0/z_link:
+                  my_robot_0/roll_link:
+                    my_robot_0/pitch_link:
+                      my_robot_0/yaw_link:
+                        my_robot_0/holder_link:
+                          my_robot_0/camera_link:
+                            {}
+          my_robot_0/current_reference:
+            {}
           navigation:
             {}
       Update Interval: 0
@@ -308,7 +373,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 20.339643478393555
+      Distance: 56.40343475341797
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
