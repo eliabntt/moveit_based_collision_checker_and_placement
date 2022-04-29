@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<robot name="my_robot">
+  <link name="base_link"/>
+  <joint name="base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_link_inertia"/>
+  </joint>
+  <link name="base_link_inertia">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/firefly.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <!-- attach multirotor_base_plugin to the base_link -->
+  <joint name="rotor_0_joint" type="continuous">
+    <origin rpy="0 0 0" xyz="0.18619546181355998 0.1075 0.037"/>
+    <axis xyz="0 0 1"/>
+    <!-- TODO(ff): not currently set because it's not yet supported -->
+    <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
+    <parent link="base_link"/>
+    <child link="rotor_0"/>
+  </joint>
+  <link name="rotor_0">
+    <visual>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/propeller_ccw.dae" scale="0.1 0.1 0.1"/>
+        <!-- The propeller meshes have a radius of 1m -->
+        <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
+      </geometry>
+    </visual>
+  </link>
+  <joint name="rotor_1_joint" type="continuous">
+    <origin rpy="0 0 0" xyz="0 0.215 0.037"/>
+    <axis xyz="0 0 1"/>
+    <!-- TODO(ff): not currently set because it's not yet supported -->
+    <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
+    <parent link="base_link"/>
+    <child link="rotor_1"/>
+  </joint>
+  <link name="rotor_1">
+    <visual>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/propeller_cw.dae" scale="0.1 0.1 0.1"/>
+        <!-- The propeller meshes have a radius of 1m -->
+        <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
+      </geometry>
+    </visual>
+  </link>
+  <joint name="rotor_2_joint" type="continuous">
+    <origin rpy="0 0 0" xyz="-0.18619546181355998 0.1075 0.037"/>
+    <axis xyz="0 0 1"/>
+    <!-- TODO(ff): not currently set because it's not yet supported -->
+    <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
+    <parent link="base_link"/>
+    <child link="rotor_2"/>
+  </joint>
+  <link name="rotor_2">
+    <visual>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/propeller_ccw.dae" scale="0.1 0.1 0.1"/>
+        <!-- The propeller meshes have a radius of 1m -->
+        <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
+      </geometry>
+    </visual>
+  </link>
+  <joint name="rotor_3_joint" type="continuous">
+    <origin rpy="0 0 0" xyz="-0.18619546181355998 -0.1075 0.037"/>
+    <axis xyz="0 0 1"/>
+    <!-- TODO(ff): not currently set because it's not yet supported -->
+    <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
+    <parent link="base_link"/>
+    <child link="rotor_3"/>
+  </joint>
+  <link name="rotor_3">
+    <visual>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/propeller_cw.dae" scale="0.1 0.1 0.1"/>
+        <!-- The propeller meshes have a radius of 1m -->
+        <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
+      </geometry>
+    </visual>
+  </link>
+  <joint name="rotor_4_joint" type="continuous">
+    <origin rpy="0 0 0" xyz="0 -0.215 0.037"/>
+    <axis xyz="0 0 1"/>
+    <!-- TODO(ff): not currently set because it's not yet supported -->
+    <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
+    <parent link="base_link"/>
+    <child link="rotor_4"/>
+  </joint>
+  <link name="rotor_4">
+    <visual>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/propeller_ccw.dae" scale="0.1 0.1 0.1"/>
+        <!-- The propeller meshes have a radius of 1m -->
+        <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
+      </geometry>
+    </visual>
+  </link>
+  <joint name="rotor_5_joint" type="continuous">
+    <origin rpy="0 0 0" xyz="0.18619546181355998 -0.1075 0.037"/>
+    <axis xyz="0 0 1"/>
+    <!-- TODO(ff): not currently set because it's not yet supported -->
+    <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
+    <parent link="base_link"/>
+    <child link="rotor_5"/>
+  </joint>
+  <link name="rotor_5">
+    <visual>
+      <geometry>
+        <mesh filename="package://rotors_description/meshes/propeller_cw.dae" scale="0.1 0.1 0.1"/>
+        <!-- The propeller meshes have a radius of 1m -->
+        <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
+      </geometry>
+    </visual>
+  </link>
+</robot>
