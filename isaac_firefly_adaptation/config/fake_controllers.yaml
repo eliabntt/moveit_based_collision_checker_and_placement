@@ -1,0 +1,13 @@
+controller_list:
+  - name: fake_my_fake_group_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fake/x_joint
+      - fake/y_joint
+      - fake/z_joint
+      - fake/roll_joint
+      - fake/pitch_joint
+      - fake/yaw_joint
+initial:  # Define initial robot poses per group
+  - group: my_fake_group
+    pose: def

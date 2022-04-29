@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="my_fake_robot">
+   <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="fake/base_link" />
+
+   <link name="fake/base_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+   </link>
+   
+   <link name="fake/x_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+   </link>
+
+   <link name="fake/y_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+   </link>
+
+   <link name="fake/z_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+   </link>
+
+   <link name="fake/roll_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+   </link>
+
+   <link name="fake/pitch_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+   </link>
+
+   <link name="fake/yaw_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://isaac_firefly_adaptation/meshes/firefly.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://isaac_firefly_adaptation/meshes/firefly.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+   </link>
+
+   
+   <link name="fake/camera_link">
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+
+      <!--visual> todo add camera
+         <origin rpy="0 0 0" xyz="0 0 0" />
+         <geometry>
+            <mesh filename="package://carter/meshes/chassis.obj" scale="100 100 100"/>
+         </geometry>
+         <material name="gray_link"/>
+      </visual-->
+   </link>
+   
+   <joint name="fake/x_joint" type="prismatic">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <axis xyz="1 0 0" />
+      <parent link="fake/base_link" />
+      <child link="fake/x_link" />
+       <limit effort="50000.0" lower="-50000" upper="50000" velocity="1000"/>
+   </joint>
+   <joint name="fake/y_joint" type="prismatic">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <axis xyz="0 1 0" />
+      <parent link="fake/x_link" />
+      <child link="fake/y_link" />
+       <limit effort="50000.0" lower="-50000" upper="50000" velocity="1000"/>
+   </joint>
+   <joint name="fake/z_joint" type="prismatic">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <axis xyz="0 0 1" />
+      <parent link="fake/y_link" />
+      <child link="fake/z_link" />
+       <limit effort="50000.0" lower="0" upper="50000" velocity="1000"/>
+   </joint>
+
+   <joint name="fake/roll_joint" type="revolute">
+      <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-1.19" soft_upper_limit="1.19"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="fake/z_link"/>
+      <child link="fake/roll_link"/>
+      <axis xyz="1 0 0"/>
+      <limit effort="87" lower="-1.19" upper="1.19" velocity="3.1415927"/>
+    </joint>
+    <joint name="fake/pitch_joint" type="revolute">
+      <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-1.19" soft_upper_limit="1.19"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="fake/roll_link"/>
+      <child link="fake/pitch_link"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="87" lower="-1.19" upper="1.19" velocity="3.1415927"/>
+    </joint>
+    <joint name="fake/yaw_joint" type="continuous">
+      <safety_controller k_position="100.0" k_velocity="40.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="fake/pitch_link"/>
+      <child link="fake/yaw_link"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="87"  velocity="2"/>
+    </joint>
+    <joint name="fake/camera_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="fake/yaw_link"/>
+      <child link="fake/camera_link"/>
+    </joint>
+</robot>

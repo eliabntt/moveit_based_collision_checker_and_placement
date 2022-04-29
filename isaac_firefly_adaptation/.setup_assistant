@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: isaac_firefly_adaptation
+    relative_path: urdf/fake_firefly.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/my_fake_robot.srdf
+  CONFIG:
+    author_name: Elia Bonetto
+    author_email: elia.bonetto@tuebingen.mpg.de
+    generated_timestamp: 1646228356

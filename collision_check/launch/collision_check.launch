@@ -1,0 +1,8 @@
+<launch>
+    <group ns="fake">
+        <node pkg="collision_check" type="collision_check_node" name="collision_check" output="screen" respawn="true"/>
+        <param name="robot_mesh_path" value="$(find rotors_description)/meshes/firefly.dae"/>
+    </group>
+
+    <include file="$(find isaac_firefly_adaptation)/launch/demo.launch"/>
+</launch>

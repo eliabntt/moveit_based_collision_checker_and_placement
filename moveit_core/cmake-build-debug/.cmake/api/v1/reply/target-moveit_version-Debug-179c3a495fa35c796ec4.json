@@ -1,0 +1,467 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "devel/lib/moveit_core/moveit_version"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_install",
+			"install",
+			"add_compile_options",
+			"moveit_build_options",
+			"add_definitions",
+			"include",
+			"find_package",
+			"configure_shared_library_build_settings",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"version/CMakeLists.txt",
+			"/opt/ros/noetic/share/catkin/cmake/custom_install.cmake",
+			"CMakeLists.txt",
+			"cmake/moveit.cmake",
+			"/opt/ros/noetic/share/rosconsole/cmake/rosconsole-extras.cmake",
+			"/opt/ros/noetic/share/rosconsole/cmake/rosconsoleConfig.cmake",
+			"/opt/ros/noetic/share/roscpp/cmake/roscppConfig.cmake",
+			"/opt/ros/noetic/share/actionlib/cmake/actionlibConfig.cmake",
+			"/opt/ros/noetic/share/tf2_ros/cmake/tf2_rosConfig.cmake",
+			"/opt/ros/noetic/share/tf2_geometry_msgs/cmake/tf2_geometry_msgsConfig.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/tools/libraries.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/all.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 2
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 7,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 10,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 57,
+				"parent" : 4
+			},
+			{
+				"file" : 10,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 10,
+				"line" : 76,
+				"parent" : 9
+			},
+			{
+				"file" : 9,
+				"parent" : 10
+			},
+			{
+				"command" : 7,
+				"file" : 9,
+				"line" : 197,
+				"parent" : 11
+			},
+			{
+				"file" : 8,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 8,
+				"line" : 197,
+				"parent" : 13
+			},
+			{
+				"file" : 7,
+				"parent" : 14
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 197,
+				"parent" : 15
+			},
+			{
+				"file" : 6,
+				"parent" : 16
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 197,
+				"parent" : 17
+			},
+			{
+				"file" : 5,
+				"parent" : 18
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 222,
+				"parent" : 19
+			},
+			{
+				"file" : 4,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 12,
+				"parent" : 21
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 20,
+				"parent" : 9
+			},
+			{
+				"file" : 12,
+				"parent" : 23
+			},
+			{
+				"command" : 8,
+				"file" : 12,
+				"line" : 174,
+				"parent" : 24
+			},
+			{
+				"command" : 5,
+				"file" : 11,
+				"line" : 18,
+				"parent" : 25
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 8,
+				"parent" : 21
+			},
+			{
+				"command" : 9,
+				"file" : 2,
+				"line" : 194,
+				"parent" : 4
+			},
+			{
+				"command" : 9,
+				"file" : 2,
+				"line" : 183,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-maybe-uninitialized"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wwrite-strings"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wunreachable-code"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wredundant-decls"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wcast-qual"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 22,
+					"define" : "ROSCONSOLE_BACKEND_LOG4CXX"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "ROS_BUILD_SHARED_LIBS=1"
+				},
+				{
+					"backtrace" : 27,
+					"define" : "ROS_PACKAGE_NAME=\"moveit_core\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/background_processing/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/exceptions/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/backtrace/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/collision_detection/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/collision_detection_fcl/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/collision_detection_bullet/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/constraint_samplers/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/controller_manager/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/distance_field/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/collision_distance_field/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/dynamics_solver/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/kinematics_base/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/kinematics_metrics/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/robot_model/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/transforms/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/robot_state/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/robot_trajectory/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/kinematic_constraints/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/macros/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/planning_interface/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/planning_request_adapter/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/planning_scene/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/profiler/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/python/tools/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/sensor_manager/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/trajectory_processing/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/utils/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/ebonetto/moveit/moveit_core/cmake-build-debug/devel/include"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/opt/ros/noetic/include"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/opt/ros/noetic/include/pybind11_catkin"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/usr/include/eigen3"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/usr/include/python3.8"
+				},
+				{
+					"backtrace" : 29,
+					"isSystem" : true,
+					"path" : "/usr/include/bullet"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "moveit_version::@a21a3921dd3b9a0dc0f8",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "moveit_version",
+	"nameOnDisk" : "moveit_version",
+	"paths" : 
+	{
+		"build" : "version",
+		"source" : "version"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "version/version.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

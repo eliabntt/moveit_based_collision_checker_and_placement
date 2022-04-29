@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ebonetto/moveit/moveit_core/cmake-build-debug/devel/setup.sh

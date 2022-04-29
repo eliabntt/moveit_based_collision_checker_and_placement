@@ -1,0 +1,7 @@
+controller_list:
+  - name: my_fake_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - fake/virtual

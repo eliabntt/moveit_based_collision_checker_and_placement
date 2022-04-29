@@ -1,0 +1,111 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"catkin_run_tests_target",
+			"_catkin_add_google_test",
+			"catkin_add_gtest",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/opt/ros/noetic/share/catkin/cmake/test/tests.cmake",
+			"/opt/ros/noetic/share/catkin/cmake/test/gtest.cmake",
+			"kinematic_constraints/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 37,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 98,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 177,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 190,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "tests::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "clean_test_results_moveit_core::@66aef2cb65e23b1bc8dd"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "test_orientation_constraints::@5da5e2946d49df8d2882"
+		}
+	],
+	"id" : "_run_tests_moveit_core_gtest_test_orientation_constraints::@5da5e2946d49df8d2882",
+	"name" : "_run_tests_moveit_core_gtest_test_orientation_constraints",
+	"paths" : 
+	{
+		"build" : "kinematic_constraints",
+		"source" : "kinematic_constraints"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/kinematic_constraints/CMakeFiles/_run_tests_moveit_core_gtest_test_orientation_constraints",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/kinematic_constraints/CMakeFiles/_run_tests_moveit_core_gtest_test_orientation_constraints.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
