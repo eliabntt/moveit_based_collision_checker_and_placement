@@ -93,7 +93,9 @@ bool CollisionChecker::isInside(PointSimple p){
 
 bool
 CollisionChecker::get_position(double &x, double &y, double &z, double &yaw, const int &limit_collision, const double &forced_z) {
-	ps.world.collision_objects = collision_objects;
+	std::vector<moveit_msgs::CollisionObject> tmp;
+	tmp.push_back(collision_objects.at(collision_objects.size() - 1));
+	ps.world.collision_objects = tmp;
 	planning_scene_->usePlanningSceneMsg(ps);
 
 	Eigen::Isometry3d pose = Eigen::Isometry3d::Identity();
@@ -111,8 +113,8 @@ CollisionChecker::get_position(double &x, double &y, double &z, double &yaw, con
 
 	randomize_position(x,y,z, yaw);
 	while (not (isInside({x, y}))) {
-		ROS_INFO_STREAM("x: " << x << " y: " << y << " z: " << z);
-		ROS_INFO_STREAM("isInside: " << isInside({x, y}));
+//		ROS_INFO_STREAM("x: " << x << " y: " << y << " z: " << z);
+//		ROS_INFO_STREAM("isInside: " << isInside({x, y}));
 		randomize_position(x,y,z, yaw);
 	}
 
@@ -233,6 +235,14 @@ bool CollisionChecker::check_collision(collision_check::collision_check_srv::Req
 		bin.meshes[0] = mesh; //mesh
 		bin.id = "world"; //rename object
 		collision_objects.emplace_back(bin);
+		ps.world.collision_objects = collision_objects;
+		planning_scene_->usePlanningSceneMsg(ps);
+		planning_scene_interface.applyCollisionObjects(collision_objects, object_colors);
+
+		object_colors.clear();
+		collision_objects.clear();
+		ps.is_diff = true;
+
 		check_world_id_.clear();
 		check_world_id_.emplace_back("world");
 		index++;
