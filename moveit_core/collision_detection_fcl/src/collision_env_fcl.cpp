@@ -364,7 +364,7 @@ namespace collision_detection
 			req.verbose = true;
 			req.max_contacts = 1000;
 			req.max_contacts_per_pair = 1000;
-			req.cost = true;
+			req.cost = false;
 
 			CollisionData cd(&req, &res, nullptr);
 

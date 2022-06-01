@@ -125,6 +125,7 @@ CollisionChecker::get_position(double &x, double &y, double &z, double &yaw, con
 	planning_scene_->getWorldNonConst()->setObjectPose(check_object_ids_.at(0), pose);
 
 	for (int i = 0; i < 99; i++) {
+		ROS_INFO_STREAM("Checking collision for the " << i << " time");
 		try {
 			auto res = planning_scene_->getCollisionEnv()->checkCollisionBetweenObjectGroups(check_world_id_,
 			                                                                                 check_object_ids_);
