@@ -1,5 +1,7 @@
 # MoveIt based collision checker + object placement
 
+## This repository is part of the [GRADE](https://eliabntt.github.io/GRADE-RR/home) project
+
 ROS based collision checker service based on an edited MoveIt core package. 
 
 The idea is based on the work made by @pradeepr-roboticist in this [issue](https://github.com/ros-planning/moveit/issues/2097).
@@ -101,12 +103,12 @@ __________
 ### NOTE(s)
 
 - The system to work requires a moveit scene set up and running.
+- By our testing this can consume a lot of RAM. Please be aware of this. We are planning to implement the same strategy with the `trimesh` package. Any contribution in that sense would be greatly appreciated.
 
-___________
-## License
+__________
+### CITATION
+If you find this work useful please cite our work as
 
-All Code in this repository - unless otherwise stated in local license or code headers is
+```
 
-Copyright 2021 Max Planck Institute for Intelligent Systems, Tübingen.
-
-Licensed under the terms of the GNU General Public Licence (GPL) v3 or higher. See: https://www.gnu.org/licenses/gpl-3.0.en.html
+```
